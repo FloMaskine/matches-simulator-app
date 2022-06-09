@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Simulador de Partidas</string>
+    <string name="txt_simulate">Botao de Simulacao de partidas</string>
+    <string name="name_homeTeam">Time da Casa</string>
+    <string name="homeTeam_flag">Bandeira do Time da Casa</string>
+    <string name="iv_away_team_flag">Bandeira do time visitante</string>
+    <string name="versus">X</string>
+    <string name="txt_score_homeTeam">01</string>
+    <string name="txt_name_awayTeam">Time Visitante</string>
+    <string name="txt_score_awayTeam">02</string>
+</resources>

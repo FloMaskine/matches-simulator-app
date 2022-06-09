@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Matches Simulator</string>
+    <string name="txt_simulate">Match simulator button</string>
+    <string name="homeTeam_flag">HomeTeam Flag</string>
+    <string name="name_homeTeam">Home Team</string>
+    <string name="txt_score_homeTeam">01</string>
+    <string name="versus">X</string>
+    <string name="iv_away_team_flag">Away Team Flag</string>
+    <string name="txt_name_awayTeam">Away Team</string>
+    <string name="txt_score_awayTeam">02</string>
 </resources>
