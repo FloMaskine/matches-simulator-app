@@ -8,6 +8,6 @@ Este repositorio foi organizado em algumas branches que representam as implement
 
 2. Componentes, Layouts e UI/UX Em Apps Android.
      - [release/componentes-layouts-ui-ux-em-apps-android](https://github.com/FloMaskine/matches-simulator-app/tree/release/componentes-layouts-ui-ux-em-apps-android)
-     - 
+     
 3. Construindo o App em Kotlin - OBS: O curso foi feito usando Java e Kotlin mas resolvi utilizar apenas Kotlin.
      - [release/kotlin-construindo-app-android](https://github.com/FloMaskine/matches-simulator-app/tree/release/kotlin-construindo-app-android)
