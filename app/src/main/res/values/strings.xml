@@ -8,4 +8,5 @@
     <string name="iv_away_team_flag">Away Team Flag</string>
     <string name="txt_name_awayTeam">Away Team</string>
     <string name="txt_score_awayTeam">02</string>
+    <string name="error_api">Unexpected Error!!</string>
 </resources>
