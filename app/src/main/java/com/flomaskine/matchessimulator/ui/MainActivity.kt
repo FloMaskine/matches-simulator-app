@@ -17,11 +17,12 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var matchesAPI: MatchesAPI
-    private lateinit var matchesAdapter: MatchesAdapter
+    private var matchesAdapter: MatchesAdapter = MatchesAdapter(Collections.emptyList())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,9 +42,9 @@ class MainActivity : AppCompatActivity() {
                 .setListener(object : AnimatorListenerAdapter() {
                     override fun onAnimationEnd(animation: Animator) {
                         for (i in 0 until matchesAdapter.itemCount) {
-                            val match: Match = matchesAdapter.match!!.get(i)
-                            val homeStars = match.homeTeam.stars+1
-                            val awayStars = match.awayTeam.stars+1
+                            val match: Match = matchesAdapter.match!![i]
+                            val homeStars = match.homeTeam.stars + 1
+                            val awayStars = match.awayTeam.stars + 1
                             val randomHome = (0..homeStars).shuffled().last()
                             val randomAway = (0..awayStars).shuffled().last()
                             match.homeTeam.score = randomHome
@@ -52,11 +53,9 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 })
+
         }
     }
-    //Reserva
-    //Random.nextInt(match.homeTeam.stars + 1)
-    //Random.nextInt(match.awayTeam.stars + 1)
 
 
     private fun setupHttpClient() {
@@ -70,6 +69,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupMatchesList() {
         binding.rvMatches.setHasFixedSize(true)
         binding.rvMatches.layoutManager = LinearLayoutManager(this)
+        binding.rvMatches.adapter = matchesAdapter
         findMatchesFromApi()
 
     }
